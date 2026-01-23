@@ -1,5 +1,5 @@
 name: DeathDropPercent
-author: MrQuackDuck
+authors: [MrQuackDuck, 2SaucesLong]
 version: '${project.version}'
 main: net.justempire.deathdroppercent.DeathDropPercent
 api-version: '1.16'
