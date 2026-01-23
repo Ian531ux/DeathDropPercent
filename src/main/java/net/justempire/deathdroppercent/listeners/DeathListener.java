@@ -5,6 +5,7 @@ import net.justempire.deathdroppercent.models.ItemSlot;
 import org.bukkit.Location;
 import org.bukkit.Material;
 import org.bukkit.World;
+import org.bukkit.GameRule;
 import org.bukkit.configuration.ConfigurationSection;
 import org.bukkit.enchantments.Enchantment;
 import org.bukkit.entity.Player;
@@ -55,8 +56,8 @@ public class DeathListener implements Listener {
         }
 
         // If keepInventory in the world is enabled, then stop further execution
-        boolean keepInventoryEnabled = world.getGameRuleValue("keepInventory").equals("true");
-        if (keepInventoryEnabled) return;
+        Boolean keepInventoryEnabled = world.getGameRuleValue(GameRule.KEEP_INVENTORY);
+        if (Boolean.TRUE.equals(keepInventoryEnabled)) return;
 
         // Getting inventory items that are not air
         List<ItemSlot> nonEmptyItems = new ArrayList<>();
