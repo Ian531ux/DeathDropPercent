@@ -52,7 +52,7 @@ public class DeathListener implements Listener {
             if (!player.hasPermission("deathdroppercent.custom." + pair.getKey())) continue;
 
             try { percentage = (double)pair.getValue(); }
-            catch (Exception e) { System.out.println(e.getMessage()); }
+            catch (Exception e) { plugin.getLogger().warning(e.getMessage()); }
         }
 
         // If keepInventory in the world is enabled, then stop further execution
