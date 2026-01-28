@@ -33,7 +33,7 @@ public final class DeathDropPercent extends JavaPlugin {
         DdcCommand ddcCommand = new DdcCommand(this);
         this.getCommand("deathdroppercent").setExecutor(ddcCommand);
 
-        System.out.println("[DeathDropPercent] Enabled successfully!");
+        getLogger().info("Enabled successfully!");
     }
 
     private void configure() {
@@ -61,6 +61,6 @@ public final class DeathDropPercent extends JavaPlugin {
 
     @Override
     public void onDisable() {
-        System.out.println("[DeathDropPercent] Shutting down!");
+        getLogger().info("Shutting down!");
     }
 }
